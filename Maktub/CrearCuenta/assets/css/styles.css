@@ -1,0 +1,581 @@
+/* ==========================================================================
+   Club Maktub - Auth Layout (Bootstrap 5.3)
+   ========================================================================== */
+
+:root{
+  /* Brand */
+  --mk-accent: #00A1E0;        /* botón + foco */
+  --mk-accent-2: #1C73B8;      /* hover */
+  --mk-ink: #0f172a;           /* texto principal (panel derecho) */
+  --mk-muted: #6b7280;         /* textos secundarios */
+  --mk-page-bg: #ffffff;
+
+  /* Hero overlay */
+  --mk-hero-overlay-from: rgba(6, 10, 17, 0.25);
+  --mk-hero-overlay-to: rgba(6, 10, 17, 0.75);
+
+  /* Panel spacing / sizing */
+  --mk-panel-max: 70vw;
+  --mk-panel-padding-x: 3rem;
+  --mk-panel-padding-y: 3rem;
+
+  /* Typography */
+  --mk-title-size: clamp(2.25rem, 3.2vw, 3.25rem);
+  --mk-title-weight: 600;
+  --mk-subtitle-size: 1rem;
+  --mk-font-family:'Satoshi', sans-serif;
+
+  /* Steps */
+  --mk-steps-dot: 42px;
+  --mk-steps-border: #1C73B8;
+  --mk-steps-border-active: #00A1E0;
+  --mk-steps-bg: #1C73B8;
+  --mk-steps-bg-active: #00A1E0;
+  --mk-steps-bg-complete: #00A1E0;
+  --mk-steps-text: #ffffff;
+  --mk-steps-line: #1C73B8;
+  --mk-steps-line-active: #00A1E0;
+  --mk-steps-line-width: 2px;
+  --mk-steps-line-length: 36px;
+  --mk-steps-line-gap: 10px;
+
+  /* Inputs */
+  --mk-input-height: 52px;
+  --mk-input-radius: 10px;
+  --mk-input-border: #d1d5db;
+  --mk-input-bg: #ffffff;
+  --mk-input-text: #111827;
+  --mk-input-placeholder: #9aa3af;
+
+  --mk-input-padding-x: 1rem;
+  --mk-input-padding-left-with-icon: 1rem;
+  --mk-input-icon-size: 18px;
+  --mk-input-icon-color: #9aa3af;
+
+  /* Focus */
+  --mk-focus-border: var(--mk-accent);
+  --mk-focus-ring: 0 0 0 .20rem #00A1E0;
+
+  /* Validation */
+  --mk-valid: #16a34a;
+  --mk-invalid: #ef4444;
+  --mk-invalid-ring: 0 0 0 .25rem rgba(239,68,68,.18);
+  --mk-feedback-size: .875rem;
+
+  /* Button */
+  --mk-btn-height: 52px;
+  --mk-btn-radius: 12px;
+  --mk-btn-bg: var(--mk-accent);
+  --mk-btn-bg-hover: var(--mk-accent-2);
+  --mk-btn-text: #ffffff;
+
+  /* Checkbox */
+  --mk-check-size: 18px;
+
+  /* Membership card */
+  --mk-card-bg: #ffffff;
+  --mk-card-border: #e5e7eb;
+  --mk-card-radius: 26px;
+  --mk-card-shadow: 0 22px 55px rgba(15, 23, 42, 0.2);
+  --mk-card-gap: 1.6rem;
+  --mk-card-padding: 1.5rem;
+  --mk-card-title-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  --mk-card-title-weight: 600;
+  --mk-card-title-color: #303030;
+  --mk-card-desc-color: var(--mk-muted);
+  --mk-card-eyebrow-size: .95rem;
+  --mk-card-eyebrow-letter: .12em;
+  --mk-card-price-size: clamp(1.6rem, 3vw, 2rem);
+  --mk-card-price-weight: 400;
+
+  --mk-card-media-width: 190px;
+  --mk-card-media-radius: 22px;
+  --mk-card-media-bg: #f1f6fb;
+  --mk-card-media-border: #e4eef8;
+  --mk-card-media-height: 250px;
+  --mk-card-image: none;
+  --mk-card-image-bg: linear-gradient(160deg, #0f172a 0%, #1f3a5f 55%, #2c7bbf 100%);
+  --mk-card-image-text: rgba(255, 255, 255, 0.85);
+
+  --mk-card-badge-bg: #e3b23c;
+  --mk-card-badge-text: #8b5a00;
+  --mk-card-badge-radius: 999px;
+
+  --mk-card-btn-height: 48px;
+  --mk-card-btn-radius: 999px;
+  --mk-card-btn-border: var(--mk-accent);
+  --mk-card-btn-bg: #ffffff;
+  --mk-card-btn-text: var(--mk-accent);
+  --mk-card-btn-bg-hover: var(--mk-accent);
+  --mk-card-btn-text-hover: #ffffff;
+
+  --mk-card-selected-border: var(--mk-accent);
+  --mk-card-selected-shadow: 0 20px 45px rgba(0, 161, 224, 0.25);
+  --mk-card-selected-btn-bg: var(--mk-accent);
+  --mk-card-selected-btn-text: #ffffff;
+  --mk-card-selected-btn-bg-hover: var(--mk-accent-2);
+  --mk-card-selected-btn-shadow: 0 10px 25px rgba(0, 161, 224, 0.35);
+}
+
+/* Page */
+body {
+  font-family: var(--mk-font-family);
+}
+.mk-auth{
+  background: var(--mk-page-bg);
+  color: var(--mk-ink);
+}
+
+/* Hero */
+.mk-hero{
+  position: relative;
+  min-height: 46vh;
+  overflow: hidden;
+}
+@media (min-width: 992px){
+  .mk-hero{ min-height: 100vh; }
+}
+
+.mk-hero__bg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+.mk-hero__overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, var(--mk-hero-overlay-from), var(--mk-hero-overlay-to));
+}
+
+.mk-hero__content{
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  color: #ffffff;
+}
+
+.mk-steps{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.mk-steps__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mk-steps__item{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mk-steps__dot{
+  width: var(--mk-steps-dot);
+  height: var(--mk-steps-dot);
+  border-radius: 999px;
+  border: 2px solid var(--mk-steps-border);
+  background: var(--mk-steps-bg);
+  color: var(--mk-steps-text);
+  display:grid;
+  place-items:center;
+  font-weight: 500;
+}
+.mk-steps__dot i{
+  font-size: 1rem;
+}
+.mk-steps__line{
+  width: var(--mk-steps-line-length);
+  height: var(--mk-steps-line-width);
+  background: var(--mk-steps-line);
+  border-radius: 999px;
+  margin: 0 var(--mk-steps-line-gap);
+}
+.mk-steps__item.is-active .mk-steps__dot{
+  border-color: var(--mk-steps-border-active);
+  background: var(--mk-steps-bg-active);
+  font-weight: 600;
+}
+.mk-steps__item.is-complete .mk-steps__dot{
+  border-color: var(--mk-steps-border-active);
+  background: var(--mk-steps-bg-complete);
+}
+.mk-steps__item.is-complete .mk-steps__line{
+  background: var(--mk-steps-line-active);
+}
+
+.mk-brand{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  opacity: .95;
+  font-family: var(--mk-font-family);
+}
+.mk-brand__mark{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(6px);
+}
+.mk-brand__mark i{ font-size: 18px; }
+.mk-brand__name{ font-weight: 500; font-size: 1.25rem; letter-spacing: .2px; }
+
+.mk-hero__title{
+  font-size: clamp(2rem, 2vw, 2rem);
+  line-height: 1.05;
+  font-weight: 600;
+  margin: 0;
+}
+.mk-hero__subtitle{
+  max-width: 44ch;
+  margin: 0;
+  opacity: .9;
+}
+
+/* Panel */
+.mk-panel{
+  background: #ffffff;
+}
+.mk-panel__inner{
+  max-width: var(--mk-panel-max);
+  padding: var(--mk-panel-padding-y) var(--mk-panel-padding-x);
+}
+@media (max-width: 991.98px){
+  .mk-panel__inner{
+    padding: 2.25rem 1.25rem;
+  }
+}
+
+.mk-form__title{
+  font-size: var(--mk-title-size);
+  font-weight: var(--mk-title-weight);
+  letter-spacing: -0.02em;
+}
+.mk-form__subtitle{
+  color: var(--mk-muted);
+  font-size: var(--mk-subtitle-size);
+}
+
+/* Labels */
+.mk-label{
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: .5rem;
+}
+
+/* Input wrapper with icon */
+.mk-input{
+  position: relative;
+}
+
+.mk-control{
+  height: var(--mk-input-height);
+  border-radius: var(--mk-input-radius);
+  border-color: var(--mk-input-border);
+  background: var(--mk-input-bg);
+  color: var(--mk-input-text);
+  padding-left: var(--mk-input-padding-left-with-icon);
+  padding-right: var(--mk-input-padding-x);
+}
+.mk-control::placeholder{
+  color: var(--mk-input-placeholder);
+}
+
+.mk-input__icon{
+  position:absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--mk-input-icon-size);
+  color: var(--mk-input-icon-color);
+  pointer-events: none;
+}
+
+/* Focus: keep Bootstrap base but align to mockup */
+.mk-control:focus{
+  border-color: var(--mk-focus-border);
+  box-shadow: var(--mk-focus-ring);
+}
+
+/* Password eye button */
+.mk-input--password .mk-control{
+  padding-right: 3.1rem;
+}
+.mk-eye{
+  position:absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display:grid;
+  place-items:center;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+}
+.mk-eye:hover{
+  background: rgba(15,23,42,.06);
+}
+
+/* Validation styling (extends Bootstrap behavior) */
+.was-validated .mk-control:invalid,
+.mk-control.is-invalid{
+  border-color: var(--mk-invalid);
+  box-shadow: none;
+}
+.was-validated .mk-control:invalid:focus,
+.mk-control.is-invalid:focus{
+  box-shadow: var(--mk-invalid-ring);
+}
+
+.was-validated .mk-control:valid,
+.mk-control.is-valid{
+  border-color: var(--mk-valid);
+  box-shadow: none;
+}
+
+.mk-feedback{
+  font-size: var(--mk-feedback-size);
+}
+
+/* Checkbox */
+.mk-check{
+  display:flex;
+  align-items:flex-start;
+  gap:.6rem;
+}
+.mk-check .form-check-input{
+  width: var(--mk-check-size);
+  height: var(--mk-check-size);
+  margin-top: .15rem;
+}
+.mk-check .form-check-input:checked{
+  background-color: var(--mk-accent);
+  border-color: var(--mk-accent);
+}
+.mk-check__label{
+  color: #374151;
+  line-height: 1.35;
+}
+
+.mk-link{
+  color: #111827;
+  text-decoration: underline;
+  text-decoration-color: rgba(17,24,39,.35);
+}
+.mk-link:hover{ color: #111827; text-decoration-color: rgba(17,24,39,.75); }
+
+/* Button */
+.mk-btn{
+  height: var(--mk-btn-height);
+  border-radius: var(--mk-btn-radius);
+  background: var(--mk-btn-bg);
+  color: var(--mk-btn-text);
+  border: 1px solid rgba(0,0,0,.04);
+  font-weight: 600;
+}
+.mk-btn:hover{
+  background: var(--mk-btn-bg-hover);
+  color: var(--mk-btn-text);
+}
+.mk-btn:active{
+  transform: translateY(1px);
+}
+
+/* Footnote */
+.mk-footnote{
+  color: var(--mk-muted);
+  font-size: .875rem;
+}
+
+/* Membership selection cards */
+.mk-select-membresia{
+  display: flex;
+  flex-direction: column;
+  gap: var(--mk-card-gap);
+  margin: 1.6rem 0 2rem;
+}
+
+.mk-plan-card{
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  background: var(--mk-card-bg);
+  border: 1px solid var(--mk-card-border);
+  border-radius: var(--mk-card-radius);
+  padding: var(--mk-card-padding);
+  /* box-shadow: var(--mk-card-shadow); */
+  align-items: stretch;
+  /* width: 70vh; */
+}
+
+.mk-plan-card__media{
+  flex: 0 0 var(--mk-card-media-width);
+  max-width: var(--mk-card-media-width);
+  /* border-radius: var(--mk-card-media-radius);
+  background: var(--mk-card-media-bg);
+  border: 1px solid var(--mk-card-media-border);
+  padding: .75rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.card__media {
+  max-width: 150px;
+}
+.mk-plan-card__image{
+  width: 100%;
+  height: 100%;
+  min-height: var(--mk-card-media-height);
+  border-radius: calc(var(--mk-card-media-radius) - 6px);
+  background-image: var(--mk-card-image), var(--mk-card-image-bg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--mk-card-image-text);
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.mk-plan-card__image-text{
+  background: rgba(15, 23, 42, 0.32);
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+.mk-plan-card__content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mk-plan-card__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.mk-plan-card__title{
+  margin: 0;
+  font-size: var(--mk-card-title-size);
+  font-weight: var(--mk-card-title-weight);
+  color: var(--mk-card-title-color);
+}
+
+.mk-plan-card__badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: var(--mk-card-badge-bg);
+  color: var(--mk-card-badge-text);
+  border-radius: var(--mk-card-badge-radius);
+  padding: .35rem .9rem;
+  font-size: .92rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mk-plan-card__eyebrow{
+  margin: .55rem 0 .35rem;
+  font-size: var(--mk-card-eyebrow-size);
+  letter-spacing: var(--mk-card-eyebrow-letter);
+  color: var(--mk-accent);
+  text-transform: uppercase;
+}
+
+.mk-plan-card__desc{
+  margin: 0 0 .6rem;
+  color: var(--mk-card-desc-color);
+  max-width: 38ch;
+}
+
+.mk-plan-card__price{
+  margin: .2rem 0 1.2rem;
+  font-size: var(--mk-card-price-size);
+  font-weight: var(--mk-card-price-weight);
+  color: var(--mk-card-title-color);
+}
+
+.mk-plan-card__actions{
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mk-plan-card__btn{
+  min-width: 200px;
+  height: var(--mk-card-btn-height);
+  border-radius: var(--mk-card-btn-radius);
+  border: 2px solid var(--mk-card-btn-border);
+  background: var(--mk-card-btn-bg);
+  color: var(--mk-card-btn-text);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  transition: all .2s ease;
+}
+
+.mk-plan-card__btn:hover{
+  background: var(--mk-card-btn-bg-hover);
+  color: var(--mk-card-btn-text-hover);
+}
+
+.mk-plan-card.is-selected{
+  border-color: var(--mk-card-selected-border);
+  box-shadow: var(--mk-card-selected-shadow);
+}
+
+.mk-plan-card.is-selected .mk-plan-card__btn{
+  background: var(--mk-card-selected-btn-bg);
+  border-color: var(--mk-card-selected-btn-bg);
+  color: var(--mk-card-selected-btn-text);
+  /* box-shadow: var(--mk-card-selected-btn-shadow); */
+}
+
+.mk-plan-card.is-selected .mk-plan-card__btn:hover{
+  background: var(--mk-card-selected-btn-bg-hover);
+  border-color: var(--mk-card-selected-btn-bg-hover);
+}
+
+@media (max-width: 991.98px){
+  .mk-plan-card{
+    flex-direction: column;
+  }
+
+  .mk-plan-card__media{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mk-plan-card__actions{
+    justify-content: stretch;
+  }
+
+  .mk-plan-card__btn{
+    width: 100%;
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Crea tu cuenta - Club Maktub" />
+  <title>Club Maktub | Crea tu cuenta</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+</head>
+
+<body class="mk-auth">
+  <main class="container-fluid p-0">
+    <section class="row g-0 min-vh-100">
+      <!-- LEFT / HERO -->
+      <aside class="col-12 col-lg-4 mk-hero order-0">
+        <div class="mk-hero__bg" style="background-image: url('assets/img/hero.jpg')"></div>
+        <div class="mk-hero__overlay"></div>
+
+        <div class="mk-hero__content">
+          <div class="mk-brand">
+            <span class="mk-brand__name"><img src="assets/img/macktub-logo-header.png" alt="Maktub"style="width: 200px"></span>
+          </div>
+
+          <h1 class="mk-hero__title">
+            Bienvenidos<br />
+            a Club Maktub
+          </h1>
+          <p class="mk-hero__subtitle">
+            Nuestro propósito es conectarte con las nuevas tecnologías y
+            acompañarte en la expansión de tu capital.
+          </p>
+        </div>
+      </aside>
+
+      <!-- RIGHT / FORM -->
+      <section class="col-12 col-lg-7 d-flex align-items-center justify-content-center mk-panel">
+        <div class="mk-panel__inner w-100">
+          <!-- <nav class="mk-steps" aria-label="Progreso">
+            <ol class="mk-steps__list">
+              <li class="mk-steps__item is-complete">
+                <span class="mk-steps__dot" aria-hidden="true">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <span class="visually-hidden">Paso 1 completado</span>
+                <span class="mk-steps__line" aria-hidden="true"></span>
+              </li>
+              <li class="mk-steps__item is-active">
+                <span class="mk-steps__dot" aria-hidden="true">2</span>
+                <span class="visually-hidden">Paso 2 actual</span>
+                <span class="mk-steps__line" aria-hidden="true"></span>
+              </li>
+              <li class="mk-steps__item">
+                <span class="mk-steps__dot" aria-hidden="true">3</span>
+                <span class="visually-hidden">Paso 3 pendiente</span>
+                <span class="mk-steps__line" aria-hidden="true"></span>
+              </li>
+              <li class="mk-steps__item">
+                <span class="mk-steps__dot" aria-hidden="true">4</span>
+                <span class="visually-hidden">Paso 4 pendiente</span>
+              </li>
+            </ol>
+          </nav> -->
+          <header class="text-center mb-4">
+            <h2 class="mk-form__title mb-2">Crea tu cuenta</h2>
+            <p class="mk-form__subtitle mb-0">
+              ID de patrocinador: <strong>0000</strong>
+            </p>
+          </header>
+
+          <form class="needs-validation" novalidate>
+            <!-- Nombre completo -->
+            <div class="mb-3">
+              <label class="form-label mk-label" for="fullName">Nombre completo</label>
+              <div class="mk-input">
+                <!-- <i class="fa-regular fa-user mk-input__icon"></i> -->
+                <input id="fullName" name="fullName" placeholder="Nombre completo" type="text"
+                  class="form-control mk-control" value="" required />
+                <div class="invalid-feedback mk-feedback">
+                  Ingresa tu nombre completo.
+                </div>
+              </div>
+            </div>
+            <!-- Usuario -->
+            <div class="mb-3">
+              <label class="form-label mk-label" for="username">Usuario</label>
+              <div class="mk-input">
+                <!-- <i class="bi bi-person-badge mk-input__icon" aria-hidden="true"></i> -->
+                <input id="username" name="username" type="text" class="form-control mk-control"
+                  placeholder="Ingresa tu usuario" required minlength="3" />
+                <div class="invalid-feedback mk-feedback">
+                  Ingresa un usuario válido (mín. 3 caracteres).
+                </div>
+              </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-4">
+              <label class="form-label mk-label" for="password">Contraseña</label>
+              <div class="mk-input mk-input--password">
+                <!-- <i class="bi bi-lock mk-input__icon" aria-hidden="true"></i> -->
+                <!-- <i class="fa-regular fa-lock mk-input__icon"></i> -->
+                <input id="password" name="password" type="password" class="form-control mk-control"
+                  placeholder="••••••••" required minlength="8" autocomplete="new-password" />
+                <button type="button" class="btn mk-eye" data-toggle-password aria-label="Mostrar u ocultar contraseña">
+                  <i class="bi bi-eye" aria-hidden="true"></i>
+                </button>
+                <div class="invalid-feedback mk-feedback">
+                  Tu contraseña debe tener al menos 8 caracteres.
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-4">
+              <label class="form-label mk-label" for="email">Dirección de correo</label>
+              <div class="mk-input">
+                <!-- <i class="bi bi-envelope mk-input__icon" aria-hidden="true"></i> -->
+                <input id="email" name="email" type="email" class="form-control mk-control" placeholder="tu@correo.com"
+                  required />
+                <div class="invalid-feedback mk-feedback">
+                  Ingresa un correo válido.
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <!-- Teléfono -->
+              <!-- <div class="col-12 col-md-6">
+                <label class="form-label mk-label" for="phone">Teléfono</label>
+                <div class="mk-input">
+                  <i class="bi bi-telephone mk-input__icon" aria-hidden="true"></i>
+                  <input id="phone" name="phone" type="tel" class="form-control mk-control" placeholder="555-0000"
+                    required />
+                  <div class="invalid-feedback mk-feedback">
+                    Ingresa tu teléfono.
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- Ciudad -->
+              <!-- <div class="col-12 col-md-6">
+                <label class="form-label mk-label" for="city">Ciudad</label>
+                <div class="mk-input">
+                  <i class="bi bi-geo-alt mk-input__icon" aria-hidden="true"></i>
+                  <input id="city" name="city" type="text" class="form-control mk-control" placeholder="Tu ciudad"
+                    required />
+                  <div class="invalid-feedback mk-feedback">
+                    Ingresa tu ciudad.
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+            <!-- Términos -->
+            <div class="mt-4 mb-4">
+              <div class="form-check mk-check">
+                <input class="form-check-input" type="checkbox" value="" id="terms" required />
+                <label class="form-check-label mk-check__label" for="terms">
+                  He leído los
+                  <a class="mk-link" href="#" onclick="return false;">Términos y Condiciones</a>
+                  junto a las
+                  <a class="mk-link" href="#" onclick="return false;">Políticas de Privacidad</a>.
+                </label>
+                <div class="invalid-feedback mk-feedback mt-2">
+                  Debes aceptar los términos para continuar.
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn mk-btn w-100 mt-3">Continuar</button>
+          </form>
+
+          <p class="mk-footnote text-center mt-4 mb-0">
+            © <span id="year"></span> Club Maktub
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="https://kit.fontawesome.com/dcc5c69259.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

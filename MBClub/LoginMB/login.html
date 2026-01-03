@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicia Sesión - Energía Financiera</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"
+    />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/form-controls.css" />
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+  <body class="bg-main text-white">
+    <div class="login-page d-flex align-items-center min-vh-100">
+      <div
+        class="container-fluid login-bg"
+      >
+        <div class="row g-0 min-vh-100">
+          <!-- Columna izquierda -->
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center px-3 py-5 order-2 order-lg-1"
+          >
+            <div class="hero-pattern-overlay"></div>
+            <div class="hero-content position-relative">
+              <img src="img/logo-M-academia 2.png" alt="" width="146px" >
+              <h1 class="hero-title mb-3 pt-4">
+                Conecta con tu energía<br />
+                financiera
+              </h1>
+              <p class="hero-subtitle mb-0 text-lg-left">
+                Da el primer paso de forma segura.
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna derecha -->
+          <div
+            class="col-lg-6 d-flex align-items-center justify-content-center px-3 py-3 bg-dark-panel order-1 order-lg-2"
+          >
+            <div class="w-100" style="max-width: 420px">
+              <h2 class="login-title mb-1">Inicia Sesión</h2>
+              <p class="text-muted mb-4 pt-3">
+                ¿No tienes cuenta? 
+                <a href="#" class="link-accent">Contáctanos</a>
+              </p>
+              <form class="needs-validation" novalidate>
+                <div class="mb-4">
+                  <label for="miuEmail" class="form-label">MIU o Dirección de Correo</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-rounded"
+                    id="miuEmail"
+                    placeholder="MIU: 0000 / correo@gmail.com"
+                  />
+                </div>
+                <div class="mb-2 pt-2">
+                  <label for="password" class="form-label input-pass">Contraseña</label>
+                  <div class="position-relative">
+                    <input
+                      type="password"
+                      class="form-control form-control-rounded"
+                      id="password"
+                      placeholder="Escribe tu contraseña"
+                      required
+                      minlength="8"
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+                      aria-describedby="passwordHelp"
+                      autocomplete="current-password"/>
+                    <button
+                      type="button"
+                      class="btn-eye"
+                      aria-label="Mostrar u ocultar contraseña">
+                      <!-- <i class="bi bi-eye"></i> -->
+                    </button>
+                    <div id="passwordHelp" class="invalid-feedback">
+                      La contraseña es incorrecta.
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start align-items-center mb-5">
+                  <a href="./forgot-pass.html" class="link-muted">
+                    ¿Olvidaste tu contraseña?
+                  </a>
+                </div>
+                <button formaction="./forgot-pass.html" type="submit" class="btn btn-primary btn-main w-100">
+                  Iniciar Sesión
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (() => {
+        const form = document.querySelector('.needs-validation');
+        if (!form) return;
+
+        form.addEventListener('submit', (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        });
+      })();
+    </script>
+  </body>
+</html>
