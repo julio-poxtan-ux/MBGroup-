@@ -1,7 +1,7 @@
 # Landing - Desarrollos UX UI (Bootstrap 5.x)
 
 ## Nota sobre Bootstrap
-Bootstrap 5.5 no existe. Este proyecto usa Bootstrap 5.3.x (compatible con Bootstrap 5).
+Bootstrap 5.3.x 
 
 ## Estructura
 - index.html
@@ -17,4 +17,3 @@ Bootstrap 5.5 no existe. Este proyecto usa Bootstrap 5.3.x (compatible con Boots
   - --c-blue: #1C73B8
 
 ## Publicación
-Sube la carpeta completa a cualquier hosting estático (Netlify, Vercel, S3, Nginx).
