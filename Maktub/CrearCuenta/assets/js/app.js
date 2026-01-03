@@ -62,4 +62,54 @@
     if (initialSelected) setSelected(initialSelected);
   }
 
+
+  // Payment token copy
+  const copyButtons = document.querySelectorAll('.mk-pay__copy');
+  if (copyButtons.length) {
+    copyButtons.forEach(button => {
+      let timeoutId;
+
+      const showMessage = () => {
+        const tooltip = button.querySelector('.mk-pay__tooltip');
+        if (!tooltip) return;
+        tooltip.classList.add('is-visible');
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          tooltip.classList.remove('is-visible');
+        }, 2000);
+      };
+
+      button.addEventListener('click', async () => {
+        const targetSelector = button.getAttribute('data-copy-target');
+        const target = targetSelector ? document.querySelector(targetSelector) : null;
+        if (!target) return;
+        const value = target.value || target.textContent || '';
+        if (!value) return;
+
+        const fallbackCopy = () => {
+          target.focus();
+          target.select();
+          try {
+            document.execCommand('copy');
+          } catch (err) {
+            return;
+          }
+          target.setSelectionRange(0, 0);
+        };
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(value);
+          } else {
+            fallbackCopy();
+          }
+        } catch (err) {
+          fallbackCopy();
+        }
+
+        showMessage();
+      });
+    });
+  }
+
 })();
