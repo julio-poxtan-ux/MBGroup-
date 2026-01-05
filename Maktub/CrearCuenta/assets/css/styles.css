@@ -10,14 +10,43 @@
   --mk-muted: #6b7280;         /* textos secundarios */
   --mk-page-bg: #ffffff;
 
+  /* Welcome */
+  --mk-welcome-bg: linear-gradient(181deg, rgba(156, 187, 206, 0.30) -6.54%, rgba(255, 255, 255, 0.27) 10.26%, rgba(255, 255, 255, 0.27) 77.29%, rgba(173, 215, 241, 0.30) 100.75%), linear-gradient(159deg, rgba(156, 187, 206, 0.50) 10.88%, rgba(255, 255, 255, 0.45) 30.26%, rgba(255, 255, 255, 0.45) 67.36%, rgba(173, 215, 241, 0.50) 106.39%), rgba(34, 144, 255, 0.30);;
+  --mk-welcome-card-bg: #ffffff;
+  --mk-welcome-card-radius: 28px;
+  --mk-welcome-card-shadow: 0 32px 90px rgba(15, 23, 42, 0.25);
+  --mk-welcome-card-width: 620px;
+  --mk-welcome-card-gap: 1.1rem;
+  --mk-welcome-card-padding-x: 2.5rem;
+  --mk-welcome-card-padding-y: 2.5rem;
+  --mk-welcome-card-padding-x-sm: 1.5rem;
+  --mk-welcome-card-padding-y-sm: 2rem;
+  --mk-welcome-title-size: clamp(2rem, 3vw, 2.5rem);
+  --mk-welcome-title-weight: 600;
+  --mk-welcome-title-color: #1f2937;
+  --mk-welcome-image: url('../img/welcomemkb-ca-min.png');
+  --mk-welcome-image-width: 260px;
+  --mk-welcome-image-height: 280px;
+  --mk-welcome-image-width-sm: 220px;
+  --mk-welcome-image-height-sm: 240px;
+  --mk-welcome-lead-size: 1rem;
+  --mk-welcome-lead-color: #111827;
+  --mk-welcome-note-size: .95rem;
+  --mk-welcome-note-color: #6b7280;
+  --mk-welcome-btn-bg: #0b8fd7;
+  --mk-welcome-btn-bg-hover: #0a7cc0;
+  --mk-welcome-btn-text: #ffffff;
+  --mk-welcome-btn-shadow: 0 12px 24px rgba(11, 143, 215, 0.3);
+  --mk-page-bg-degra: linear-gradient(181deg, rgba(156, 187, 206, 0.30) -6.54%, rgba(255, 255, 255, 0.27) 10.26%, rgba(255, 255, 255, 0.27) 77.29%, rgba(173, 215, 241, 0.30) 100.75%), linear-gradient(159deg, rgba(156, 187, 206, 0.50) 10.88%, rgba(255, 255, 255, 0.45) 30.26%, rgba(255, 255, 255, 0.45) 67.36%, rgba(173, 215, 241, 0.50) 106.39%), rgba(34, 144, 255, 0.30);;
+
   /* Hero overlay */
   --mk-hero-overlay-from: rgba(6, 10, 17, 0.25);
   --mk-hero-overlay-to: rgba(6, 10, 17, 0.75);
 
   /* Panel spacing / sizing */
   --mk-panel-max: 70vw;
-  --mk-panel-padding-x: 3rem;
-  --mk-panel-padding-y: 3rem;
+  --mk-panel-padding-x: 4rem;
+  --mk-panel-padding-y: 4rem;
 
   /* Typography */
   --mk-title-size: clamp(2.25rem, 3.2vw, 3.25rem);
@@ -79,13 +108,13 @@
   --mk-card-shadow: 0 22px 55px rgba(15, 23, 42, 0.2);
   --mk-card-gap: 1.6rem;
   --mk-card-padding: 1.5rem;
-  --mk-card-title-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  --mk-card-title-size: clamp(1.55rem, 2vw, 2.25rem);
   --mk-card-title-weight: 600;
   --mk-card-title-color: #303030;
   --mk-card-desc-color: var(--mk-muted);
   --mk-card-eyebrow-size: .95rem;
   --mk-card-eyebrow-letter: .12em;
-  --mk-card-price-size: clamp(1.6rem, 3vw, 2rem);
+  --mk-card-price-size: clamp(1.5rem, 2.2vw, 1.5rem);
   --mk-card-price-weight: 400;
 
   --mk-card-media-width: 190px;
@@ -126,6 +155,82 @@ body {
   color: var(--mk-ink);
 }
 
+.mk-welcome {
+  background: var(--mk-welcome-bg);
+  min-height: 100vh;
+}
+.img-welcome {
+  width: 300px;
+}
+.mk-welcome-card{
+  width: min(var(--mk-welcome-card-width), 92vw);
+  background: var(--mk-welcome-card-bg);
+  border-radius: var(--mk-welcome-card-radius);
+  padding: var(--mk-welcome-card-padding-y) var(--mk-welcome-card-padding-x);
+  box-shadow: var(--mk-welcome-card-shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mk-welcome-card-gap);
+}
+
+.mk-welcome-card__title{
+  margin: 0;
+  font-size: var(--mk-welcome-title-size);
+  font-weight: var(--mk-welcome-title-weight);
+  color: var(--mk-welcome-title-color);
+}
+
+.mk-welcome-card__image{
+  width: min(var(--mk-welcome-image-width), 70%);
+  height: var(--mk-welcome-image-height);
+  background-image: var(--mk-welcome-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.mk-welcome-card__lead{
+  margin: 0;
+  max-width: 420px;
+  font-size: var(--mk-welcome-lead-size);
+  line-height: 1.6;
+  color: var(--mk-welcome-lead-color);
+}
+
+.mk-welcome-card__note{
+  margin: 0;
+  max-width: 420px;
+  font-size: var(--mk-welcome-note-size);
+  line-height: 1.5;
+  color: var(--mk-welcome-note-color);
+}
+
+.mk-welcome .mk-welcome-card__btn{
+  width: min(320px, 100%);
+  margin-top: .5rem;
+  background: var(--mk-welcome-btn-bg);
+  color: var(--mk-welcome-btn-text);
+  box-shadow: var(--mk-welcome-btn-shadow);
+  border: 0;
+}
+
+.mk-welcome .mk-welcome-card__btn:hover{
+  background: var(--mk-welcome-btn-bg-hover);
+  color: var(--mk-welcome-btn-text);
+}
+
+@media (max-width: 575.98px){
+  .mk-welcome-card{
+    padding: var(--mk-welcome-card-padding-y-sm) var(--mk-welcome-card-padding-x-sm);
+  }
+
+  .mk-welcome-card__image{
+    width: min(var(--mk-welcome-image-width-sm), 80%);
+    height: var(--mk-welcome-image-height-sm);
+  }
+}
 /* Hero */
 .mk-hero{
   position: relative;
@@ -152,7 +257,7 @@ body {
 .mk-hero__content{
   position: relative;
   z-index: 1;
-  height: 80%;
+  height: 100%;
   padding: clamp(1.5rem, 4vw, 3rem);
   display:flex;
   flex-direction: column;
@@ -234,8 +339,8 @@ body {
 .mk-brand__name{ font-weight: 500; font-size: 1.25rem; letter-spacing: .2px; }
 
 .mk-hero__title{
-  font-size: clamp(2rem, 2vw, 2rem);
-  line-height: 1.05;
+  font-size: clamp(2.5rem, 2vw, 2rem);
+  line-height: 120%;
   font-weight: 600;
   margin: 0;
 }
@@ -256,6 +361,19 @@ body {
 @media (max-width: 991.98px){
   .mk-panel__inner{
     padding: 2.25rem 1.25rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .mk-panel__inner{
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 360px){
+  .mk-panel__inner{
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
@@ -382,12 +500,14 @@ body {
 
 /* Button */
 .mk-btn{
-  height: var(--mk-btn-height);
+  /* height: var(--mk-btn-height); */
   border-radius: var(--mk-btn-radius);
   background: var(--mk-btn-bg);
   color: var(--mk-btn-text);
   border: 1px solid rgba(0,0,0,.04);
   font-weight: 600;
+  padding: .7rem 0;
+  cursor: pointer;
 }
 .mk-btn:hover{
   background: var(--mk-btn-bg-hover);
@@ -747,13 +867,10 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: repeating-conic-gradient(
-    var(--mk-accent) 0 12deg,
-    rgba(0, 161, 224, 0.2) 12deg 28deg
-  );
+  background: repeating-conic-gradient(var(--mk-accent) 0 12deg, rgb(255, 255, 255) 12deg 28deg);
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 0);
   mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 0);
-  animation: mk-pay-spin 1s linear infinite;
+  animation: mk-pay-spin 5s linear infinite;
 }
 
 @keyframes mk-pay-spin{
