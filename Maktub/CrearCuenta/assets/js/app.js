@@ -68,6 +68,37 @@
       });
     }
   }
+
+  // PIN inputs: numeric only + auto-advance
+  const pinInputs = document.querySelectorAll('[data-pin-input]');
+  if (pinInputs.length) {
+    pinInputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        input.value = input.value.replace(/\D/g, '').slice(0, 1);
+        if (input.value && pinInputs[index + 1]) {
+          pinInputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener('keydown', event => {
+        if (event.key === 'Backspace' && !input.value && pinInputs[index - 1]) {
+          pinInputs[index - 1].focus();
+        }
+      });
+
+      input.addEventListener('paste', event => {
+        const pasteText = (event.clipboardData || window.clipboardData).getData('text');
+        const digits = pasteText.replace(/\D/g, '').split('');
+        if (!digits.length) return;
+        event.preventDefault();
+        pinInputs.forEach((pinInput, idx) => {
+          pinInput.value = digits[idx] || '';
+        });
+        const last = pinInputs[Math.min(digits.length, pinInputs.length) - 1];
+        if (last) last.focus();
+      });
+    });
+  }
   // Plan card selection (single select)
   const planCards = document.querySelectorAll('.mk-plan-card');
   if (planCards.length) {

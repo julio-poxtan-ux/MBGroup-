@@ -49,8 +49,27 @@
           </header>
 
           <form class="needs-validation" novalidate>
-           
-             <a class="btn mk-btn w-100 mt-4" href="Plan.html">Continuar</a>
+            <div class="mk-pin-group" role="group" aria-label="PIN">
+              <input id="pin-1" name="pin-1" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                autocomplete="one-time-code" class="form-control mk-control mk-pin-input" required data-pin-input />
+              <input id="pin-2" name="pin-2" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                class="form-control mk-control mk-pin-input" required data-pin-input />
+              <input id="pin-3" name="pin-3" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                class="form-control mk-control mk-pin-input" required data-pin-input />
+              <input id="pin-4" name="pin-4" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                class="form-control mk-control mk-pin-input" required data-pin-input />
+              <input id="pin-5" name="pin-5" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                class="form-control mk-control mk-pin-input" required data-pin-input />
+              <input id="pin-6" name="pin-6" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                class="form-control mk-control mk-pin-input" required data-pin-input />
+            </div>
+
+            <div class="mk-pin-actions text-center mt-5">
+               <a class="mk-link-btn" href="IngresaPin.html">Reenviar PIN</a>
+              <button type="button" class="mk-link-btn">Probar otros metodos</button>
+            </div>
+
+            <a class="btn mk-btn w-100 mt-4" href="Plan.html">Continuar</a>
           </form>
 
           <p class="mk-footnote text-center mt-4 mb-0">
