@@ -19,19 +19,54 @@
   });
 
   // Password toggle
-  const btn = document.querySelector('[data-toggle-password]');
-  const input = document.getElementById('password');
-  if (btn && input) {
-    btn.addEventListener('click', () => {
-      const isPwd = input.type === 'password';
-      input.type = isPwd ? 'text' : 'password';
+  const toggleButtons = document.querySelectorAll('[data-toggle-password]');
+  if (toggleButtons.length) {
+    toggleButtons.forEach(button => {
+      const wrapper = button.closest('.mk-input--password');
+      const input = wrapper ? wrapper.querySelector('input') : null;
+      if (!input) return;
 
-      const icon = btn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('bi-eye', !isPwd);
-        icon.classList.toggle('bi-eye-slash', isPwd);
-      }
+      button.addEventListener('click', () => {
+        const isPwd = input.type === 'password';
+        input.type = isPwd ? 'text' : 'password';
+
+        const icon = button.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('bi-eye', !isPwd);
+          icon.classList.toggle('bi-eye-slash', isPwd);
+        }
+      });
     });
+  }
+
+  // Password confirmation match
+  const password = document.getElementById('password');
+  const passwordConfirm = document.getElementById('password-confirm');
+  if (password && passwordConfirm) {
+    const form = passwordConfirm.closest('form');
+    const continueBtn = document.getElementById('btn-continuar');
+
+    const validateMatch = () => {
+      if (passwordConfirm.value && password.value !== passwordConfirm.value) {
+        passwordConfirm.setCustomValidity('Las contraseñas no coinciden.');
+      } else {
+        passwordConfirm.setCustomValidity('');
+      }
+    };
+
+    password.addEventListener('input', validateMatch);
+    passwordConfirm.addEventListener('input', validateMatch);
+
+    if (continueBtn && form) {
+      continueBtn.addEventListener('click', event => {
+        validateMatch();
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      });
+    }
   }
   // Plan card selection (single select)
   const planCards = document.querySelectorAll('.mk-plan-card');
@@ -111,5 +146,61 @@
       });
     });
   }
+
+  // Custom modal toggle (opened via data-bs-toggle to avoid Bootstrap modal markup)
+  const modalTriggers = document.querySelectorAll('[data-bs-toggle="modal"]');
+  const modals = document.querySelectorAll('.mk-modal');
+
+  const getModalTarget = trigger => {
+    const selector = trigger.getAttribute('data-bs-target') || trigger.getAttribute('href');
+    if (!selector || !selector.startsWith('#')) return null;
+    return document.querySelector(selector);
+  };
+
+  const openModal = modal => {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  };
+
+  const closeModal = modal => {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  };
+
+  if (modalTriggers.length) {
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        openModal(getModalTarget(trigger));
+      });
+    });
+  }
+
+  if (modals.length) {
+    modals.forEach(modal => {
+      modal.addEventListener('click', event => {
+        if (event.target === modal) closeModal(modal);
+      });
+
+      const closeButtons = modal.querySelectorAll('[data-mk-close]');
+      if (closeButtons.length) {
+        closeButtons.forEach(button => {
+          button.addEventListener('click', event => {
+            event.preventDefault();
+            closeModal(modal);
+          });
+        });
+      }
+    });
+  }
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const activeModal = document.querySelector('.mk-modal.is-open');
+    if (activeModal) closeModal(activeModal);
+  });
 
 })();
