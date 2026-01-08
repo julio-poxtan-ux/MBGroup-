@@ -5,22 +5,16 @@
   --navbar-bg: rgba(0, 0, 0, 0.8);
   /* color fondo */
   --navbar-text: #ffffff;
-  /* color texto */
   --navbar-rounded: 18px;
-  /* radio del borde */
   --navbar-border-color: #6f6f6f;
   --navbar-border-size: 2px;
   --navbar-padding-y: 8px;
-
 }
 
 .text-degraded {
   --g1: #2189DE;
-  /* casi negro */
   --g2: #2189DE;
-  /* azul medio */
   --g3: #CAE3F7;
-  /* azul claro */
   background: linear-gradient(90deg, var(--g1) 0%, var(--g2) 55%, var(--g3) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -418,7 +412,7 @@ background-clip: text;
 }
 .display-head-web {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* Equipo */

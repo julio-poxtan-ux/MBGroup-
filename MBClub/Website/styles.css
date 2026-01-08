@@ -232,7 +232,11 @@ img.img-animation-circle {
 
  .section-web3 {
    height: 100vh!important;
-
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+  color: #fff;
  }
 
  p.title-web3 {
