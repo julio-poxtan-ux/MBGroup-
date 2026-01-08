@@ -68,6 +68,9 @@
    line-height: 1.6;
  }
 
+img.img-animation-circle {
+  width: 100px;
+}
  .article-heading {
    --min-font-size: 1.5rem;
    --max-font-size: 4rem;
@@ -100,6 +103,9 @@
  .bg-pcripto {
    background: var(--bg-section, linear-gradient(201deg, #15ACFE 5.76%, rgba(0, 0, 0, 0.00) 49.04%), linear-gradient(195deg, #0D385A 0.07%, rgba(13, 56, 90, 0.00) 21.67%), #000);
  }
+ .bg-equipo {
+  background: linear-gradient(178deg, #09507D 1.83%, rgba(0, 115, 188, 0.00) 30.72%), #000;
+ }
 
  .secmentorias {
    /* background: var(--mb-bg-end); */
@@ -119,8 +125,8 @@
 
  h2.dysplay-title {
    font-size: clamp(2.7rem,
-       calc(5.5rem + 1vw),
-       7vw);
+              calc(5.5rem + 1vw),
+              7vw);
    font-weight: 400;
  }
 
@@ -217,6 +223,27 @@
  }
 
  /* BOTONES PERSONALIZADOS */
+ .btn-conex {
+   border-radius: 12px;
+   border: 1px solid #F5FAFF;
+   background: #F5FAFF;
+   box-shadow: 34px 91px 27px 0 rgba(7, 48, 90, 0.01), 22px 58px 25px 0 rgba(7, 48, 90, 0.12), 12px 33px 21px 0 rgba(7, 48, 90, 0.40), 5px 15px 16px 0 rgba(7, 48, 90, 0.69), 1px 4px 9px 0 rgba(7, 48, 90, 0.79);
+ }
+
+ .section-web3 {
+   height: 100vh!important;
+
+ }
+
+ p.title-web3 {
+   font-size: 3rem;
+   font-weight: 500;
+ }
+
+ .section-bg-video {
+   height: 100vh;
+ }
+
  .btn-custom {
    padding: 0.6rem 1.5rem;
    border-radius: var(--radius-sm);
@@ -452,7 +479,8 @@
  }
 
  .mb-footer {
-background: linear-gradient(90deg, #073B5B 0%, #000 47.12%);   color: var(--mb-text-main);
+   background: linear-gradient(90deg, #073B5B 0%, #000 47.12%);
+   color: var(--mb-text-main);
    padding: 2rem 0;
    font-family: var(--font-family-DM-Sans);
  }

@@ -15,28 +15,30 @@
 }
 
 .text-degraded {
-     --g1: #2189DE;
-    /* casi negro */
-    --g2: #2189DE;
-    /* azul medio */
-    --g3: #CAE3F7;
-    /* azul claro */
-    background: linear-gradient(90deg, var(--g1) 0%, var(--g2) 55%, var(--g3) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+  --g1: #2189DE;
+  /* casi negro */
+  --g2: #2189DE;
+  /* azul medio */
+  --g3: #CAE3F7;
+  /* azul claro */
+  background: linear-gradient(90deg, var(--g1) 0%, var(--g2) 55%, var(--g3) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
 .text-heading-section {
   --min-font-size: 2.5rem;
-   --max-font-size: 5rem;
-   --min-viewport: 20rem;
-   --max-viewport: 50rem;
-   --ideal-font-size: calc((var(--max-font-size) - var(--min-font-size)) / (var(--max-viewport) - var(--min-viewport)));
-   font-size: clamp(var(--min-font-size),
-       var(--ideal-font-size) * 100vw,
-       var(--max-font-size));
+  --max-font-size: 5rem;
+  --min-viewport: 20rem;
+  --max-viewport: 50rem;
+  --ideal-font-size: calc((var(--max-font-size) - var(--min-font-size)) / (var(--max-viewport) - var(--min-viewport)));
+  font-size: clamp(var(--min-font-size),
+      var(--ideal-font-size) * 100vw,
+      var(--max-font-size));
 }
+
 /* Estilos generales del navbar */
 .custom-navbar {
   background-color: var(--navbar-bg);
@@ -156,12 +158,12 @@ body {
   background: linear-gradient(30deg, #000 61.86%, #003C60 93.46%);
   padding: 12rem 0;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .section-bg-membresia {
-    background-image: url(img/bg-membresias-2.jpg);
-  background-size:cover ;
+  background-image: url(img/bg-membresias-2.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -179,12 +181,12 @@ body {
 }
 
 .section-bg-gradient {
-  background: radial-gradient(circle at top, #0073bc 0%, #000 55%, #000 100%);
+background: linear-gradient(180deg, #09507D 0%, rgba(0, 115, 188, 0.00) 50.72%), #000;
   /* background-image: url(img/hero-backgroundjpg-min.jpg); */
   opacity: 0.8;
 }
 
-/* Si quieres usar video, agrega la clase .section-bg-video en lugar de la de gradiente */
+
 .section-bg-video {
   position: absolute;
   inset: 0;
@@ -270,9 +272,10 @@ h4 {
 }
 
 .btn-primary-custom {
-  background: #0073bc;
-  border-color: #0073bc;
-  border-radius: 999px;
+  border-radius: 12px;
+  border: 1px solid #F5FAFF;
+  background: #F5FAFF;
+  box-shadow: 34px 91px 27px 0 rgba(7, 48, 90, 0.01), 22px 58px 25px 0 rgba(7, 48, 90, 0.12), 12px 33px 21px 0 rgba(7, 48, 90, 0.40), 5px 15px 16px 0 rgba(7, 48, 90, 0.69), 1px 4px 9px 0 rgba(7, 48, 90, 0.79);
   padding-inline: 1.75rem;
   padding-block: 0.6rem;
   font-weight: 500;
@@ -357,22 +360,83 @@ h4 {
   opacity: 0.7;
 }
 
+.sub-section-conex {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #0FCBFE 0%, #FFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-degraded-blue {
+  background: linear-gradient(90deg, #FFF 0%, #006EB4 53.37%, #FFF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.section-mb {
+  padding: 100px 100px 150px 100px;
+  background-image: url("img/bg-section-cowork-min.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.section-conex {
+  padding: 100px 100px 150px 100px;
+  background-image: url("img/bg-conex-paralax.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-emuna {
+  padding: 0 100px;
+  background-image: url("img/bg-emuna-complex.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.section-emuna .section-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section-emuna .section-content > .row {
+  width: 100%;
+}
+.display-head-web {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
 /* Equipo */
 .team-card {
-  background: #111;
-  border-radius: 1rem;
+  background:black;
+  /* border-radius: 1rem; */
   overflow: hidden;
   height: 100%;
 }
 
 .team-photo {
   background: #333;
-  height: 260px;
+  /* height: 260px; */
   width: 100%;
 }
 
 .team-body {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .team-name {
@@ -423,5 +487,20 @@ footer {
     min-height: calc(100vh - 0px);
     display: flex;
     align-items: center;
+  }
+}
+
+.img-animation-circle {
+  animation: circle-spin 18s linear infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+@keyframes circle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
