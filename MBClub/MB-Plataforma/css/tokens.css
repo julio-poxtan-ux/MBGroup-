@@ -72,7 +72,7 @@
   --navbar-height: 72px;
 
   /* Buttons */
-  --btn-radius: 16px;
+  --btn-radius: 8px;
   --btn-padding-y: .55rem;
   --btn-padding-x: 1.0rem;
   --btn-font-size: .92rem;
@@ -91,8 +91,10 @@
   --card-padding: 1.25rem;
   --card-border: var(--border-1);
   --card-bg: linear-gradient(180deg, rgba(18,26,43,.85) 0%, rgba(8,12,20,.92) 100%);
-  --card-scroll-min-width: 36vh;
-  --card-scroll-max-width: 38vh;
+  --card-scroll-min-width: 40vh;
+  --card-scroll-max-width: 40vh;
+  --user-avatar-border: 2px solid rgba(0,161,224,.85);
+  --user-avatar-shadow: 0 0 0 2px rgba(0,161,224,.25);
   --progress-ring-size: 52px;
   --progress-ring-thickness: 6px;
   --progress-ring-track: rgba(255,255,255,.35);

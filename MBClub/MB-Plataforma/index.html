@@ -39,13 +39,13 @@
       </div>
 
       <div class="ms-auto d-flex align-items-center gap-2">
-        <button class="mb-nav-icon" type="button" aria-label="Notificaciones">
+        <!-- <button class="mb-nav-icon" type="button" aria-label="Notificaciones">
           <i class="bi bi-bell" aria-hidden="true"></i>
-        </button>
+        </button> -->
         <div class="dropdown">
           <button class="mb-userchip mb-userchip-button dropdown-toggle" type="button" id="mbUserMenu"
             data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menu de usuario">
-            <div class="me-1">
+            <div class="me-1 text-start">
               <div class="name">Sergio Jacobo</div>
               <div class="meta">Estudiante Pro</div>
             </div>
@@ -116,10 +116,19 @@
     <!-- Recomendados -->
     <section class="container-fluid mb-container mb-section pt-3">
       <div class="mb-section-title">
-        <div>
-          <h2>Recomendados para ti</h2>
-          <p class="mb-subtitle">Retoma tus cursos donde los dejaste</p>
+        <div class="mb-section-title mb-section-title--icon">
+        <div class="mb-section-heading">
+          <div class="mb-section-icon" aria-hidden="true">
+            <img src="assets/icon-recomendado.svg" alt="Recomendado">
+          </div>
+          <div>
+            <h2>Recomendados para ti</h2>
+            <p class="mb-subtitle">
+              Retoma tus cursos donde los dejaste
+            </p>
+          </div>
         </div>
+      </div>
 
         <div class="mb-scroll-controls" aria-label="Controles de desplazamiento">
           <button class="mb-icon-btn" type="button" data-scroll-prev aria-label="Anterior">
@@ -267,12 +276,17 @@
 
     <!-- Mentorías en vivo -->
     <section class="container-fluid mb-container mb-section pt-2">
-      <div class="mb-section-title">
-        <div>
-          <h2>Repeticiones de mentorías en vivo</h2>
-          <p class="mb-subtitle">
-            Explora todas las mentorías en vivo en la biblioteca
-          </p>
+      <div class="mb-section-title mb-section-title--icon">
+        <div class="mb-section-heading">
+          <div class="mb-section-icon" aria-hidden="true">
+            <img src="assets/icon-live-course.svg" alt="">
+          </div>
+          <div>
+            <h2>Repeticiones de mentorías en vivo</h2>
+            <p class="mb-subtitle">
+              Explora todas las mentorías en vivo en la biblioteca
+            </p>
+          </div>
         </div>
       </div>
 
@@ -351,10 +365,26 @@
     <!-- Biblioteca -->
     <section class="container-fluid mb-container mb-section pt-4">
       <div class="mb-section-title">
-        <div>
+        <!-- <div>
+          <div class="d-flex">
+            <img src="./assets/icon-live-course.svg" alt="">
+          </div>
           <h2>Biblioteca de mentorías</h2>
           <p class="mb-subtitle">Explora y continúa tu avance</p>
+        </div> -->
+        <div class="mb-section-title mb-section-title--icon">
+        <div class="mb-section-heading">
+          <div class="mb-section-icon" aria-hidden="true">
+            <img src="assets/icon-learning-course.svg" alt="">
+          </div>
+          <div>
+            <h2>Biblioteca de mentorías</h2>
+            <p class="mb-subtitle">
+              Explora y continúa tu avance
+            </p>
+          </div>
         </div>
+      </div>
         <div class="dropdown">
           <button class="btn mb-button-secondary" type="button" id="mbLibraryFilter" data-bs-toggle="dropdown"
             aria-expanded="false" aria-label="Filtrar biblioteca">
@@ -402,7 +432,7 @@
             aria-label="Abrir Estrategias de Inversión">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: estrategias de inversión" />
+                <img src="assets/img/course-play.png" alt="Portada: estrategias de inversión" />
                 <div class="mb-progress-ring" aria-label="Progreso 80%">
                   50%
                 </div>
@@ -423,7 +453,7 @@
             aria-label="Abrir Masterclass de DeFi">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: masterclass de DeFi" />
+                <img src="assets/img/course-play.png" alt="Portada: masterclass de DeFi" />
                 <div class="mb-progress-ring" aria-label="Progreso 50%">
                   50%
                 </div>
@@ -444,7 +474,7 @@
             aria-label="Abrir Fondos de Inversión Alternativos">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: fondos de inversión alternativos" />
+                <img src="assets/img/course-play.png" alt="Portada: fondos de inversión alternativos" />
                 <div class="mb-progress-ring" aria-label="Progreso 80%">
                   80%
                 </div>
@@ -467,7 +497,7 @@
             aria-label="Abrir Estrategias de Inversión 2">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: estrategias de inversión" />
+                <img src="assets/img/course-play.png" alt="Portada: estrategias de inversión" />
                 <div class="mb-progress-ring" aria-label="Progreso 50%">
                   50%
                 </div>
@@ -488,7 +518,7 @@
             aria-label="Abrir Masterclass de DeFi 2">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: masterclass de DeFi" />
+                <img src="assets/img/course-play.png" alt="Portada: masterclass de DeFi" />
                 <div class="mb-progress-ring" aria-label="Progreso 50%">
                   50%
                 </div>
@@ -509,7 +539,7 @@
             aria-label="Abrir Fondos de Inversión Alternativos 2">
             <div class="p-3">
               <div class="mb-library-cover">
-                <img src="assets/img/LibraryCard.png" alt="Portada: fondos de inversión alternativos" />
+                <img src="assets/img/course-play.png" alt="Portada: fondos de inversión alternativos" />
                 <div class="mb-progress-ring" aria-label="Progreso 80%">
                   80%
                 </div>
