@@ -32,15 +32,36 @@
         <button class="mb-nav-icon" type="button" aria-label="Notificaciones">
           <i class="bi bi-bell" aria-hidden="true"></i>
         </button>
-        <a class="text-decoration-none" href="profile.html" aria-label="Ir al perfil">
-          <div class="mb-userchip">
+        <div class="dropdown">
+          <button class="mb-userchip mb-userchip-button dropdown-toggle" type="button" id="mbUserMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menu de usuario">
             <div class="me-1">
               <div class="name">Sergio Jacobo</div>
               <div class="meta">Estudiante Pro</div>
             </div>
             <img id="mbPhotoPreview" src="assets/img/Perfil%20de%20usuario.png" alt="Foto de perfil de Sergio">
-          </div>
-        </a>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end mb-user-menu" aria-labelledby="mbUserMenu">
+            <li>
+              <a class="dropdown-item" href="profile.html">
+                <i class="bi bi-gear" aria-hidden="true"></i>
+                Opciones
+              </a>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                <i class="bi bi-life-preserver" aria-hidden="true"></i>
+                Centro de ayuda
+              </button>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <button class="dropdown-item mb-logout" type="button">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                Cerrar sesion
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>

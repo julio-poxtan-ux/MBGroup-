@@ -12,15 +12,15 @@
   --color-text-2:rgba(242,246,255,.72);
   --color-text-3:rgba(242,246,255,.50);
 
-  --color-accent:#00A1E0;
+  --color-accent:#0073BC;
   --color-accent-2:#1C73B8;
   --color-success:#23C55E;
   --color-danger:#EF4444;
   --color-warning:#F59E0B;
 
   /* Typography */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: 'HK Guise';
+  --font-mono: 'Inter';
 
   --text-h1: clamp(1.6rem, 2.2vw, 2.2rem);
   --text-h2: 1.1rem;
@@ -66,13 +66,13 @@
   --focus-ring: 0 0 0 3px rgba(0,161,224,.28);
 
   /* Layout */
-  --layout-max: 1220px;
+  --layout-max: 1440px;
 
   /* Components */
   --navbar-height: 72px;
 
   /* Buttons */
-  --btn-radius: 999px;
+  --btn-radius: 16px;
   --btn-padding-y: .55rem;
   --btn-padding-x: 1.0rem;
   --btn-font-size: .92rem;
@@ -87,10 +87,47 @@
   --btn-secondary-border: rgba(255,255,255,.12);
 
   /* Cards */
-  --card-radius: var(--radius-xl);
+  --card-radius: var(--radius-sm);
   --card-padding: 1.25rem;
   --card-border: var(--border-1);
   --card-bg: linear-gradient(180deg, rgba(18,26,43,.85) 0%, rgba(8,12,20,.92) 100%);
+  --card-scroll-min-width: 36vh;
+  --card-scroll-max-width: 38vh;
+  --progress-ring-size: 52px;
+  --progress-ring-thickness: 6px;
+  --progress-ring-track: rgba(255,255,255,.35);
+  --progress-ring-fill: #2ea8ff;
+  --progress-ring-text: rgba(242,246,255,.88);
+  --progress-ring-font-size: .7rem;
+  --tutorial-card-width: 360px;
+  --tutorial-card-height: 190px;
+  --tutorial-card-radius: 28px;
+  --tutorial-card-padding: 1.35rem;
+  --tutorial-card-gap: .35rem;
+  --tutorial-card-bg: radial-gradient(120% 120% at 60% 0%, rgba(53,62,102,.6) 0%, rgba(14,20,34,.95) 55%, rgba(7,10,18,1) 100%);
+  --tutorial-card-border: 1px solid rgba(255,255,255,.08);
+  --tutorial-card-shadow: 0 20px 45px rgba(0,0,0,.45);
+  --tutorial-card-overlay: linear-gradient(180deg, rgba(8,12,20,0) 0%, rgba(8,12,20,.65) 85%);
+  --tutorial-card-glow: radial-gradient(45% 55% at 50% 40%, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 70%);
+  --tutorial-card-content-width: 75%;
+  --tutorial-card-tag-color: #2ae7e7;
+  --tutorial-card-tag-size: .7rem;
+  --tutorial-card-title-size: 1.05rem;
+  --tutorial-card-title-color: var(--color-text-1);
+  --tutorial-card-time-bg: rgba(6,10,18,.75);
+  --tutorial-card-time-border: 1px solid rgba(255,255,255,.12);
+  --tutorial-card-time-color: rgba(242,246,255,.9);
+  --tutorial-card-time-size: .85rem;
+  --tutorial-card-time-padding-y: .35rem;
+  --tutorial-card-time-padding-x: .65rem;
+  --tutorial-card-logo-size: 120px;
+  --tutorial-card-logo-radius: 22px;
+  --tutorial-card-logo-bg: linear-gradient(180deg, rgba(19,26,44,.9) 0%, rgba(10,12,20,.95) 100%);
+  --tutorial-card-logo-border: 1px solid rgba(255,255,255,.08);
+  --tutorial-card-logo-shadow: 0 18px 40px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.05);
+  --tutorial-card-logo-color: #b60c2a;
+  --tutorial-card-logo-font-size: 4.8rem;
+  --tutorial-card-logo-letter-spacing: -0.03em;
 
   /* Inputs */
   --input-radius: 999px;
