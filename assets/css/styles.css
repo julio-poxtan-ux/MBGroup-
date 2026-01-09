@@ -91,6 +91,11 @@
   place-items: center;
   position: relative;
   z-index: 2;
+  color: white;
+}
+span.brand-tile__inner {
+  font-size: 2rem;
+  color: white;
 }
 
 .brand-tile__inner::before{

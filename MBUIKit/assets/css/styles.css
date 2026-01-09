@@ -38,7 +38,7 @@
   /* Buttons */
   --neo-btn-padding-y: 0.65rem;
   --neo-btn-padding-x: 1.4rem;
-  --neo-btn-radius: 999px;
+  --neo-btn-radius: 16px;
   --neo-btn-border-width: 1px;
   --neo-btn-bg: var(--neo-color-primary);
   --neo-btn-bg-hover: #2b82c7;
@@ -60,7 +60,7 @@
   /* Pills */
   --neo-pill-padding-y: 0.45rem;
   --neo-pill-padding-x: 1.1rem;
-  --neo-pill-radius: 999px;
+  --neo-pill-radius: 16px;
   --neo-pill-bg: rgba(15, 23, 42, 0.75);
   --neo-pill-bg-active: rgba(28, 115, 184, 0.95);
 

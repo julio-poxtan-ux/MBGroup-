@@ -24,49 +24,6 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-offset="100">
   <!-- NAVBAR -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="navbarMain">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                     <img src="img/logo-MB-academia.png" class="logo-navbar img-fluid" alt="">
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    >
-                    <span class="bi bi-list fs-1 text-white"></span>
-                </button>
-                <div class="d-flex">
-                <div class="collapse navbar-collapse text-white" id="navbarNav">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#inicio">Membresía</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#componentes">CONEX</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#formularios">Comunidades</a>
-                        </li>
-                        <li class="nav-item">
-                          <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto"><i class="bi bi-calendar2"></i> Calentario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto"><i class="bi bi-person-circle"></i> Perfil</a>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        </nav> -->
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top mx-auto">
     <div class="container-fluid">
       <!-- LOGO -->
@@ -244,18 +201,15 @@
     <!-- SPACIOS MB (2 COLUMNAS) -->
     <section id="spacios" class="section-mb">
       <div class="container section-content">
-        <div class="row align-items-start">
-          <div class="col">
-            <img src="img/espaciomb-logo.svg" alt="SPACIOS MB">
+        <div class="mb-spaces-wrap">
+          <img src="img/espaciomb-logo.svg" class="img-logospacios" alt="SPACIOS"data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+          <div class="mb-spaces-body">
+            <h2 class="mb-spaces-title"data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+              TU ESPACIO DE CREACION Y <br> NETWORKING
+            </h2>
+            <a class="btn btn-primary-custom mb-spaces-btn mt-4"data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000" href="#">Más información</a>
           </div>
-        </div>
-        <div class="row align-items-end">
-          <div class="col">
-             <h2 class="mb-3 text-uppercase">Tu espacio de creación y networking</h2>
-            <a href="#contacto" class="btn btn-primary-custom">
-              Más información
-            </a>
-          </div>
+          <p class="mb-spaces-note"data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">Vive una experiencia única de conexión laboral y negocios.</p>
         </div>
       </div>
     </section>
@@ -325,14 +279,14 @@
       <div class="container section-content">
         <div class="row mb-5 text-center">
           <div class="col-lg-8 mx-auto">
-            <h2 class="mb-2 text-white">Nuestro equipo</h2>
+            <h2 class="mb-2 text-white"data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-duration="7000"data-aos-easing="linear">Nuestro equipo</h2>
             <p class="text-white">
               Conoce a nuestros referentes.
             </p>
           </div>
         </div>
         <div class="row g-4">
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div class="team-card">
               <div class="team-photo">
                 <img src="img/team/PlaceholderImage.png" alt="Sergio Jacobo" class="img-fluid">
@@ -347,7 +301,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div class="team-card">
               <div class="team-photo">
                 <img src="img/team/PlaceholderImage-1.png" alt="Adriana Benchimol">
@@ -362,13 +316,13 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div class="team-card">
               <div class="team-photo">
                 <img src="img/team/PlaceholderImage-2.png" alt="Jose Juarez">
               </div>
               <div class="team-body">
-                <div class="team-name">Jose Juarez</div>
+                <div class="team-name">José Juárez</div>
                 <div class="team-role">Director de Tecnología</div>
                 <p class="team-desc">
                   Desarrolla la arquitectura tecnológica que impulsa nuestras
@@ -377,7 +331,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div class="team-card">
               <div class="team-photo">
                 <img src="img/team/PlaceholderImage-3.png" alt="">
@@ -399,68 +353,82 @@
 
     <!-- PROPIEDAD COLECTIVA -->
     <section id="propiedad" class="section-wrapper text-center">
-      <div class="section-bg section-bg-gradient"></div>
+      <div class="section-bg section-bg-web3"></div>
       <div class="container section-content">
-        <!-- Placeholder del icono central -->
-        <div class="mx-auto mb-4" style="width: 160px;">
-          <div class="ratio ratio-1x1 bg-dark rounded-circle border border-secondary"></div>
-        </div>
-        <h2 class="mb-3 title-section-propiedad">
+         <div class="mb-3 title-section-propiedad">
           EMPRESA COMPROMETIDA CON LA PROPIEDAD COLECTIVA
-        </h2>
-        <p class="mb-0">
+         </div>
+        <!-- Placeholder del icono central -->
+        <div class="mx-auto mb-4">
+         <img src="img/token-icon.png" class="img-fluid img-animation" alt="Token MB club">
+        </div>
+        <h5 class="mb-0">
           Porcentaje de nuestros servicios es destinado para el token nativo de Maktub.
-        </p>
+        </h5>
+      </div>
+    </section>
+    
+    <!-- CONTACTO -->
+     <section id="contacto" class="section-wrapper text-center">
+      <div class="section-bg section-addres pt-5 pb-5"></div>
+      <div class="container section-content">
+         <div class="row">
+          <div class="col-md-4">
+            <i class="bi bi-envelope icon-info"></i>
+             <div class="footer-top-title">Correo</div>
+          <div class="footer-top-sub mt-2">Canal de contacto</div>
+          <div>info@mbcapital.com</div>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-telephone icon-info"></i>
+            <div class="footer-top-title">Teléfono</div>
+          <div class="footer-top-sub mt-2">Número de contacto</div>
+          <div class="footer-sub-info mt-2">+52 999 999 9999</div>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-geo-alt icon-info"></i>
+            <div class="footer-top-title">Office</div>
+          <div class="footer-top-sub">Ubicación de oficina física</div>
+          <div class="footer-sub-info mt-2">
+            Centro Comercial Roma Norte,<br> Torre 1, Ciudad de México CDMX.
+          </div>
+          </div>
+         </div>
       </div>
     </section>
   </main>
-  <!-- CONTACTO + FOOTER -->
-  <footer id="contacto">
+  <!-- FOOTER -->
+  <div class="section-divider"></div>
+  <footer class="mb-footer">
     <div class="container">
-      <div class="row text-center text-md-start gy-4">
-        <div class="col-md-4">
-          <div class="footer-top-title">Correo</div>
-          <div class="footer-top-sub">Canal de contacto</div>
-          <div>info@mbcapital.com</div>
+      <div class="footer-top d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+        <div class="footer-meta">© 2025 MB Capital. Todos los derechos reservados.</div>
+        <div class="footer-links d-flex flex-column flex-sm-row align-items-center gap-3">
+          <a href="#" class="footer-link mx-3">Términos y condiciones</a>
+          <a href="#" class="footer-link">Políticas de privacidad</a>
         </div>
-        <div class="col-md-4">
-          <div class="footer-top-title">Teléfono</div>
-          <div class="footer-top-sub">Número de contacto</div>
-          <div>+52 999 999 9999</div>
-        </div>
-        <div class="col-md-4">
-          <div class="footer-top-title">Office</div>
-          <div class="footer-top-sub">Ubicación de oficina física</div>
-          <div>
-            Centro Comercial Roma Norte, Torre 1, Ciudad de México.
-          </div>
+        <div class="footer-logo">
+          <img src="img/logo-MB-academia.png" alt="MB Capital">
         </div>
       </div>
-
-      <div class="row mt-5 gy-4">
-        <div class="col-md-6 text-center text-md-start">
-          <div class="footer-top-title">Comunidad en Telegram</div>
-          <p class="footer-top-sub">Información en tiempo real y actualizaciones.</p>
-          <a href="#" class="btn btn-outline-light btn-sm rounded-pill">
-            Únete
-          </a>
+      <div class="footer-separator w-75"></div>
+      <div class="row footer-main gy-4">
+        <div class="col-lg-4 text-center text-lg-start">
+          <div class="footer-top-title">Comunidad en telegram</div>
+          <p class="footer-top-sub">Noticias, eventos e información de valor.</p>
+          <a href="#" class="footer-btn">Únete</a>
         </div>
-        <div class="col-md-6 text-center text-md-end">
+        <div class="col-lg-4 text-center text-lg-start">
           <div class="footer-top-title">Redes sociales</div>
-          <p class="footer-top-sub">Información de valor y educación financiera.</p>
-          <div>
-            <!-- Reemplaza por iconos reales -->
-            <span class="me-2">Facebook</span>
-            <span class="me-2">Instagram</span>
-            <span class="me-2">Twitter</span>
-            <span>LinkedIn</span>
+          <p class="footer-top-sub">Información de valor y actualizaciones</p>
+          <div class="footer-social d-flex justify-content-center justify-content-lg-start gap-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-      </div>
-
-      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-        <div>© 2025 MB Capital. Todos los derechos reservados.</div>
-        <div>Términos y condiciones · Política de privacidad</div>
       </div>
     </div>
   </footer>
