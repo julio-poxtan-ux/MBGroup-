@@ -132,7 +132,7 @@
   --tutorial-card-logo-letter-spacing: -0.03em;
 
   /* Inputs */
-  --input-radius: 999px;
+  --input-radius: 8px;
   --input-bg: rgba(255,255,255,.06);
   --input-border: rgba(255,255,255,.12);
   --input-color: var(--color-text-1);
